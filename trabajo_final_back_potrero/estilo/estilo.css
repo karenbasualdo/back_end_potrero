@@ -1,0 +1,92 @@
+:root {
+    --bg-color: #050505;
+    --surface-color: #121212;
+    --primary-color: #fff200;
+    --accent-color: #39ff14;
+    --text-color: #ffffff;
+    --text-muted: #999999;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.main-navbar {
+    background-color: #111111;
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-weight: 900;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-weight: 900;
+}
+
+.section-title {
+    color: white;
+}
+
+.filter-box {
+    background-color: var(--surface-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.product-card {
+    background-color: var(--surface-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(57, 255, 20, 0.25);
+}
+
+.product-card .card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+.product-price {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.login-box {
+    max-width: 500px;
+    margin: 80px auto;
+    background-color: var(--surface-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 35px;
+}
+
+.login-box p {
+    color: var(--text-muted);
+}
+
+table img {
+    object-fit: cover;
+}

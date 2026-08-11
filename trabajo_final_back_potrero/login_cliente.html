@@ -1,0 +1,110 @@
+```html
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login Cliente - Sabores</title>
+
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/estilo.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="container py-5">
+
+
+    <div class="login-box">
+
+
+        <h1>
+            Sabores
+        </h1>
+
+
+        <h2>
+            Ingreso Cliente
+        </h2>
+
+
+        <form
+            action="login_cliente.php"
+            method="post"
+        >
+
+
+            <label>
+                Usuario
+            </label>
+
+            <input
+                type="text"
+                name="usuario"
+                class="form-control mb-3"
+                required
+            >
+
+
+            <label>
+                Contraseña
+            </label>
+
+            <input
+                type="password"
+                name="contrasenia"
+                class="form-control mb-3"
+                required
+            >
+
+
+            <input
+                type="submit"
+                value="Ingresar"
+                class="btn btn-warning w-100"
+            >
+
+
+        </form>
+
+
+        <br>
+
+
+        <a
+            href="index.php"
+            class="btn btn-secondary w-100"
+        >
+            Volver a productos
+        </a>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
+```
