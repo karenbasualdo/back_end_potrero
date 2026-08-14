@@ -10,19 +10,23 @@ if (!isset($_SESSION["trabajador"])) {
 }
 
 
-mysqli_connect(
-    "127.0.0.1",
-    "root",
-    "sakura13sql",
-    "tienda_comida",
-    3307
-);
+// CONEXIÓN
+require_once "conexion.php";
 
+
+// ID DEL PRODUCTO
 $id = $_GET["id"];
 
+
+// ELIMINAR PRODUCTO
 $consulta = "DELETE FROM comidas WHERE id=$id";
 
 mysqli_query($conexion, $consulta);
 
+
+// VOLVER AL LISTADO
 header("location:listar.php");
+
+exit;
+
 ?>

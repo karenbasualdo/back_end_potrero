@@ -92,4 +92,4 @@ VALUES
     'https://www.themealdb.com/images/media/meals/uvuyxu1503067369.jpg',
     'Tacos preparados al estilo mexicano.'
 );
-```
+

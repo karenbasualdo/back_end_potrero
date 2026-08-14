@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #050505;
+    --bg-color: #443410;
     --surface-color: #121212;
     --primary-color: #fff200;
     --accent-color: #39ff14;
@@ -89,4 +89,84 @@ h1 {
 
 table img {
     object-fit: cover;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.footer {
+    background-color: #111111;
+    color: white;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+
+.footer-title {
+    color: var(--primary-color);
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+
+.footer-subtitle {
+    color: var(--primary-color);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+
+.footer-text {
+    color: #dddddd;
+    margin-bottom: 8px;
+}
+
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* ==========================================
+   IMÁGENES EXCLUSIVAS DEL FOOTER
+   ========================================== */
+
+.footer .footer-socials a img.social-icon {
+    width: 40px !important;
+    height: 40px !important;
+    max-width: 40px !important;
+    max-height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    object-fit: cover !important;
+    display: inline-block !important;
+    border-radius: 50% !important;
+}
+.social-icon:hover {
+    transform: scale(1.15);
+}
+
+.social-icon:hover {
+    transform: scale(1.15);
+}
+
+
+.social-icon:hover {
+    transform: scale(1.15);
+}
+
+
+.footer-line {
+    border-color: #555555;
+    margin: 25px 0;
+}
+
+
+.footer-copy {
+    color: var(--text-muted);
+    padding-bottom: 10px;
 }

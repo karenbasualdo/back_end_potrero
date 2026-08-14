@@ -1,8 +1,10 @@
 ```php
+
 <?php
 
 session_start();
 
+require_once "conexion.php";
 
 $usuario = $_POST["usuario"];
 

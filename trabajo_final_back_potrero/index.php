@@ -1,4 +1,3 @@
-```php
 <?php
 // ==========================================
 // CONEXIÓN CON LA BASE DE DATOS
@@ -7,7 +6,7 @@
 $conexion = mysqli_connect(
     "127.0.0.1",
     "root",
-    "sakura13sql",
+    "",
     "tienda_comida",
     3307
 );
@@ -115,7 +114,7 @@ $areas = mysqli_query(
 
     <!-- CSS PROPIO -->
 
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="estilo/estilo.css">
 
 </head>
 
@@ -127,104 +126,68 @@ $areas = mysqli_query(
      NAVBAR
      ========================================== -->
 
-<nav class="navbar navbar-expand-lg navbar-dark main-navbar">
-
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
 
-
-        <!-- LOGO -->
-
-        <a class="navbar-brand" href="index.php">
-            SABORES
+        <!-- LOGO / NOMBRE -->
+        <a class="navbar-brand fw-bold" href="index.php">
+            🍽️ SABORES
         </a>
 
-
         <!-- BOTÓN RESPONSIVE -->
-
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-        >
-
+        <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Abrir menú">
             <span class="navbar-toggler-icon"></span>
-
         </button>
 
-
         <!-- MENÚ -->
+        <div class="collapse navbar-collapse" id="menu">
 
-        <div
-            class="collapse navbar-collapse"
-            id="navbarNav"
-        >
+            <ul class="navbar-nav ms-auto">
 
-            <ul class="navbar-nav w-100">
-
-
-                <!-- PRODUCTOS -->
-
+                <!-- INICIO -->
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="index.php"
-                    >
-                        Productos
+                    <a class="nav-link" href="index.php">
+                        Inicio
                     </a>
-
                 </li>
 
-
-                <!-- API -->
-
+                <!-- PRODUCTOS -->
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="api.php"
-                    >
-                        API
+                    <a class="nav-link" href="index.php">
+                        Productos
                     </a>
-
                 </li>
 
 
                 <!-- LOGIN CLIENTE -->
-
-                <li class="nav-item ms-auto">
-
-                    <a
-                        class="nav-link"
-                        href="login_cliente.html"
-                    >
+                <li class="nav-item">
+                    <a class="nav-link" href="login_cliente.html">
                         👤 Cliente
                     </a>
-
                 </li>
 
-
                 <!-- LOGIN TRABAJADOR -->
-
                 <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="login.html"
-                    >
+                    <a class="nav-link" href="login.html">
                         🔐 Trabajador
                     </a>
-
                 </li>
 
             </ul>
 
         </div>
-
     </div>
-
 </nav>
+
+<div style="height: 70px;"></div>
 
 
 
@@ -599,15 +562,133 @@ $areas = mysqli_query(
 
 </div>
 
+<!-- FOOTER -->
+<footer class="footer mt-5">
+    <div class="container py-5">
+
+        <div class="row align-items-center">
+
+            <!-- MARCA -->
+            <div class="col-md-4 mb-4 text-center text-md-start">
+
+                <h4 class="footer-title">
+                    🍽️ SABORES
+                </h4>
+
+                <p class="footer-text">
+                    Descubrí diferentes comidas, sabores y opciones
+                    para disfrutar.
+                </p>
+
+            </div>
 
 
+            <!-- REDES SOCIALES -->
+            <div class="col-md-4 mb-4 text-center">
+
+                <h5 class="footer-subtitle">
+                    Seguinos
+                </h5>
+
+                <div class="footer-socials">
+
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        aria-label="Instagram"
+                    >
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/512/5968/5968776.png"
+                            alt="Instagram"
+                            class="social-icon"
+                        >
+                    </a>
+
+
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        aria-label="Facebook"
+                    >
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                            alt="Facebook"
+                            class="social-icon"
+                        >
+                    </a>
+
+
+                    <a
+                        href="https://www.whatsapp.com/"
+                        target="_blank"
+                        aria-label="WhatsApp"
+                    >
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+                            alt="WhatsApp"
+                            class="social-icon"
+                        >
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/"
+                        target="_blank"
+                        aria-label="LinkedIn"
+                    >
+                        <img
+                            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                            alt="LinkedIn"
+                            class="social-icon"
+                        >
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACTO -->
+            <div class="col-md-4 mb-4 text-center text-md-end">
+
+                <h5 class="footer-subtitle">
+                    Contacto
+                </h5>
+
+                <p class="footer-text mb-1">
+                    📍 Cañuelas, Argentina
+                </p>
+
+                <p class="footer-text mb-1">
+                    📞 WhatsApp: 11 xxxxxxxx
+                </p>
+
+                <p class="footer-text">
+                    📧 contacto@sabores.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <hr class="footer-line">
+
+
+        <!-- COPYRIGHT -->
+        <div class="text-center footer-copy">
+
+            © 2026 SABORES · Todos los derechos reservados karen andrea basualdo              
+
+        </div>
+
+    </div>
+</footer>
 <!-- BOOTSTRAP JS -->
 
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 ></script>
-
-
 </body>
 
 </html>

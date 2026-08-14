@@ -9,16 +9,27 @@ if (!isset($_SESSION["trabajador"])) {
     exit;
 }
 
+// ==========================================
+// CONEXIÓN CON LA BASE DE DATOS
+// ==========================================
 
-mysqli_connect(
+$conexion = mysqli_connect(
     "127.0.0.1",
     "root",
-    "sakura13sql",
+    "",
     "tienda_comida",
     3307
 );
 
-mysqli_select_db($conexion, "tienda_comida");
+
+// Comprobar conexión
+
+if (!$conexion) {
+
+    die("Error de conexión: " . mysqli_connect_error());
+
+}
+
 $nombre = $_POST["nombre"];
 $categoria = $_POST["categoria"];
 $area = $_POST["area"];

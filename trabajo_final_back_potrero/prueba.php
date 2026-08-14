@@ -3,7 +3,7 @@
 $conexion = mysqli_connect(
     "127.0.0.1",
     "root",
-    "sakura13sql",
+    "",
     "",
     3307
 );

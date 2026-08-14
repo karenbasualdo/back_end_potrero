@@ -10,13 +10,26 @@ if (!isset($_SESSION["trabajador"])) {
 }
 
 
-mysqli_connect(
+// ==========================================
+// CONEXIÓN CON LA BASE DE DATOS
+// ==========================================
+
+$conexion = mysqli_connect(
     "127.0.0.1",
     "root",
-    "sakura13sql",
+    "",
     "tienda_comida",
     3307
 );
+
+
+// Comprobar conexión
+
+if (!$conexion) {
+
+    die("Error de conexión: " . mysqli_connect_error());
+
+}
 
 $id = $_GET["id"];
 
